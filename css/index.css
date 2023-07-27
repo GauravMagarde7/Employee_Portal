@@ -1,0 +1,199 @@
+/* This CSS block sets margin, padding, border, and box-sizing properties to 0 for all elements.
+This is a common technique used to reset default styles applied by browsers and ensure consistent
+ styling across different elements. */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+
+/* The background color of the body element is set to #f7f7f7, which is a light gray color. */
+body {
+  background-color: #f7f7f7;
+}
+
+
+/* The header element is styled with a dark blue background color (#080125), white text, and 
+centered text alignment. It is set to be sticky at the top of the page (position: sticky; top: 0;), 
+and the z-index ensures it stays on top of other elements.
+ */
+.header {
+  background-color: #080125;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* The heading inside the header has the font style ,font-family and color.  */
+.header h1 {
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 26px;
+}
+
+
+/* The login box is centered on the page and has a top margin of 5%, left and right margins of 15%.*/
+.login_box {
+  margin: 5% 15% 0;
+  text-align: center;
+}
+
+
+/* The heading inside the login box has the same font style as the header.  */
+.login_box h1 {
+  color: #080125;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 26px;
+}
+
+
+/* The table styling includes collapsing borders, 1px black border color with 100% width. */
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 100%;
+}
+
+
+/* The table header cells have a dark blue background with white text. */
+thead th {
+  background-color: #080125;
+  border: 1px solid white;
+  color: white;
+}
+
+
+/* for both table cells (th and td), centered text alignment, and padding and provide 1px black border */
+th,
+td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+
+/* The odd rows have a light green background. */
+tr:nth-child(odd) {
+  background-color: rgb(222, 255, 222);
+}
+
+
+/* the even rows have a light purple background. */
+tr:nth-child(even) {
+  background-color: rgb(228, 221, 255);
+}
+
+
+/* it has margin on top and side with 5% and 0 on bottom , width is 90% and
+used overflow-x property to handle :horizontal overflow of data with align center. */
+.table_data {
+  margin: 5% 5% 0;
+  width: 90%;
+  overflow-x: auto;
+  text-align: center;
+}
+
+
+/* The heading inside the table_data has the same font style as the header, with dark navy blue color  */
+.table_data h1 {
+  color: #080125;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 26px;
+}
+
+
+/* The button and input elements have a width of 100%, padding, and a bottom border of 1px solid rgb(213, 214, 212).*/
+.button,
+select,
+input[type="text"],
+[type="number"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 1px solid rgb(213, 214, 212);
+}
+
+
+/* The button has a green background with white text and a pointer cursor. */
+.button {
+  margin-top: 3%;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* The "button1" class styles an alternate button with a white background and black border. */
+.button1 {
+  margin-top: 3%;
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
+}
+
+
+/* The button changes color on hover. */
+.button:hover {
+  background-color: #45a049;
+  border: 2px solid #45a049;
+}
+
+
+/* The modal class is set to display: none to hide it by default. It is used to create a modal overlay. */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+/* The modal content has a white background with padding and a box shadow. The modal content is centered within the viewport.*/
+.modal-content {
+  background-color: #fefefe;
+  margin: 20% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.modal-content h2 {
+  color: #080125;
+}
+
+
+/* The "close" class styles the close button in the modal, positioned at the top-right corner. */
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    max-width: 95%;
+  }
+}

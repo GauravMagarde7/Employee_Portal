@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+
+<body>
+
+
+    <div class="header">
+        <h1>Employee Portal</h1>
+    </div>
+    <div class="login_box">
+        <h1>Add New Employee</h1><br>
+        <div>
+            <input type="number" placeholder="Id" id="sid" required>
+            <span id="sidError" style="color: red;"></span>
+        </div>
+        <div>
+            <input type="text" placeholder="Name" id="name" required>
+            <span id="nameError" style="color: red;"></span>
+        </div>
+        <div>
+            <input type="number" placeholder="Age" id="age" required>
+            <span id="ageError" style="color: red;"></span>
+        </div>
+        <div>
+            <select id="designation" required>
+                <option value="none" selected disabled hidden>Select an Option</option>
+                <option value="Developer">Developer</option>
+                <option value="Manager">Manager</option>
+                <option value="Tester">Tester</option>
+                <option value="HR">HR</option>
+            </select>
+            <span id="designationError" style="color: red;"></span>
+        </div>
+        <div>
+            <input type="text" placeholder="URL" id="url" required>
+            <span id="urlError" style="color: red;"></span>
+        </div>
+        <div>
+            <select id="gender" required>
+                <option value="none" selected disabled hidden>Select an Option</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <span id="genderError" style="color: red;"></span>
+        </div>
+        <button class="button button1" onclick="manageData()">Add</button>
+        <div id="msg" style="color: red;"></div>
+    </div>
+
+
+    <div class="table_data">
+
+        <h1>Employee Details</h1>
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sid</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Designation</th>
+                    <th>URL</th>
+                    <th>Gender</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="root"></tbody>
+        </table>
+    </div>
+
+
+
+    <div id="viewModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>View Details</h2>
+            <p><span id="viewUrl"></span></p>
+            <p><strong>Name:</strong> <span id="viewName"></span></p>
+            <p><strong>Age:</strong> <span id="viewAge"></span></p>
+            <p><strong>Designation:</strong> <span id="viewDesignation"></span></p>
+            <p><strong>Gender:</strong> <span id="viewGender"></span></p>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+        </div>
+    </div>
+
+
+    <script src="js/index.js"></script>
+</body>
+
+
+</html>
